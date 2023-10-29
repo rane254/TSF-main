@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Others</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/2 - TSFStyle.css" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <div class="point">TSF</div>
+        <div class="flex">
+            <a href="/index.html" class="logo">
+                <!-- <img src="tsf logo main .png" alt="theSilverFlowerLogo"> -->
+                <h1>The Silver Flour</h1>
+            </a>
+            <nav class="navbar">
+                <a href="/index.html">Home</a>
+                <a href="/navigation/custom.html">Custom</a>
+                <a href="/navigation/others.html">Others</a>
+                <a href="/navigation/about.html">About</a>
+            </nav>
+            <div class="icons">
+                <a href="/navigation/cart.html" class="cart-btn"><i class='bx bx-cart-download'></i></a>
+                <i class="bx bxs-user" id="user-btn"></i>
+                <i class="bx bx-menu" id="menu-btn"></i>
+            </div>
+            <div class="user-box">
+                <p>Username<span><input type="text" placeholder="enter your username"></span></p>
+                <p>Email<span><input type="text" placeholder="enter your email"></span></p>
+                <a href="/accounts/login.html" class="btn">Login</a>
+                <a href="/accounts/register.html" class="btn">Register</a>
+                <form method="post">
+                    <button type="submit" name="logout" class="logout-btn">Logout</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var headcon = document.querySelector(".header")
+        var pointbtn = document.querySelector(".point")
+
+        headcon.addEventListener("mouseenter", function () {
+            gsap.to(pointbtn, {
+                opacity: 1,
+                scale: 1
+            })
+        })
+
+        headcon.addEventListener("mouseleave", function () {
+            gsap.to(pointbtn, {
+                scale: 0,
+                opacity: 0
+            })
+        })
+
+        headcon.addEventListener("mousemove", function (dets) {
+            gsap.to(pointbtn, {
+                left: dets.x - 60,
+                top: dets.y - 100
+            })
+        })
+    </script>
+
+    <main>
+    </main>
+    
+    <footer class="footer">
+        <div class="overlay"></div>
+        <div class="footer-content">
+            <div class="img-box">
+                <img src="/img/tsf logo main .png" alt="">
+            </div>
+            <div class="inner-footer">
+                <div class="card">
+                    <div class="list-container">
+                        <ul class="product-list">
+                            <h3>other products</h3>
+                            <a href="/categories/cake.html">
+                                <li>cakes</li>
+                            </a>
+                            <a href="/categories/cupcake.html">
+                                <li>cupcakes</li>
+                            </a>
+                            <a href="/categories/chocolate.html">
+                                <li>chocolates</li>
+                            </a>
+                            <a href="/categories/modak.html">
+                                <li>modaks</li>
+                            </a>
+                            <a href="/categories/loaf.html">
+                                <li>loafs</li>
+                            </a>
+                        </ul>
+                        <ul class="local-list">
+                            <h3>locals</h3>
+                            <a href="https://maps.app.goo.gl/hmDA4SHqqJyVS1aa8" target="_blank">
+                                <li>Goa</li>
+                            </a>
+                            <li>n/a</li>
+                            <li>n/a</li>
+                            <li>n/a</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>newslatter</h3>
+                    <p>Sign Up For newslatter</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/tsfcakesgoa/" target="_blank"><i
+                                class="bx bxl-instagram"></i></a>
+                        <i class="bx bxl-twitter"></i>
+                        <a href="https://www.facebook.com/thesilverflour/" target="_blank"><i
+                                class="bx bxl-facebook"></i></a>
+                        <a href="https://www.youtube.com/@tsfcakes/" target="_blank"><i class="bx bxl-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="card">
+                    <button onclick="topFunction()" id="myBtn"><a href="#top"><i class='bx bxs-up-arrow-circle'></i></a></button>
+                </div> -->
+            </div>
+            <div class="bottom-footer">
+                <p>all rights reserved - brijesh rane</p>
+            </div>
+        </div>
+        <!-- <div class="goup"><a href="#top"><i class='bx bxs-up-arrow-circle'></i></a></div> --> 
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var tweet = document.querySelector(".bx.bxl-twitter")
+
+        tweet.addEventListener("click", function () {
+                alert('Soon we will be available on Twitter');
+            });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="/3 - TSFScript.js"></script>
+</body>
+
+</html>
