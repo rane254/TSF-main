@@ -536,7 +536,7 @@ a.button:hover {
 }
 
 .products {
-    background: var(--light-green);
+    /* background: var(--light-green); */
     padding: 2vh;
     margin-left: 2vh;
     margin-right: 2vh;
@@ -553,7 +553,15 @@ a.button:hover {
 
 
 .products .box-container .box {
-    padding: 2vh;
+    text-align: center;
+    margin: 1rem;
+    line-height: 1.5;
+    background: var(--light-green);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    padding-bottom: 1rem;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 
@@ -748,6 +756,19 @@ footer .bottom-footer {
 
     .swiper-pagination-bullet {
         visibility: visible;
+    }
+
+    .slide .image {
+        height: 100%;
+        width: 100%;
+    }
+    main {
+        margin-top: 22vh;
+    }
+
+    .main {
+        height: 30vh;
+        width: 100%;
     }
 }
 
