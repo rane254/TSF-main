@@ -144,7 +144,7 @@
 
                 <div class="box">
                     <a href="categories/cupcake.html">
-                        <img src="img/cupcake-tp.png" class="box-img">
+                        <img src="img/cupcake-tp.png" class="box-img choco">
                         <h3>Cupcakes</h3>
                         <p>text</p>
                         <i class="bx bx-chevron-right"></i>
@@ -179,56 +179,45 @@
                 </div>
             </div>
         </section>
-        <section class="products">
-            <h1>Featured products</h1>
+
+        <section class="shop">
+            <div class="title">
+                <img src="" alt="">
+                <h1>Trending Products</h1>
+            </div>
+            <div class="row">
+                <img src="" alt="">
+                <div class="row-detail">
+                    <img src="" alt="">
+                    <div class="top-footer">
+                        <h1>Lorem ipsum dolor sit amet.</h1>
+                    </div>
+                </div>
+            </div>
             <div class="box-container">
                 <div class="box">
-                    <a href="categories/cake.html">
-                        <img src="img/cake-tp.png" class="box-img">
-                        <h3>Cakes</h3>
-                        <p>text</p>
-                        <i class="bx bx-chevron-right"></i>
-                    </a>
+                    <img id="image1" src="img/cake-tp.png" alt="">
+                    <a href="/categories/cake.html">shop now</a>
                 </div>
-
                 <div class="box">
-                    <a href="categories/cupcake.html">
-                        <img src="img/cupcake-tp.png" class="box-img">
-                        <h3>Cupcakes</h3>
-                        <p>text</p>
-                        <i class="bx bx-chevron-right"></i>
-                    </a>
+                    <img id="image1" src="img/cupcake-tp.png" alt="">
+                    <a href="/categories/cupcake.html">shop now</a>
                 </div>
-
                 <div class="box">
-                    <a href="categories/chocolate.html">
-                        <img src="img/candy-tp.png" class="box-img">
-                        <h3>Chocolates</h3>
-                        <p>text</p>
-                        <i class="bx bx-chevron-right"></i>
-                    </a>
+                    <img id="image1" src="img/candy-tp.png" alt="">
+                    <a href="/categories/chocolate.html">shop now</a>
                 </div>
-
                 <div class="box">
-                    <a href="categories/modak.html">
-                        <img src="img/modak-tp.png" class="box-img">
-                        <h3>Modaks</h3>
-                        <p>text</p>
-                        <i class="bx bx-chevron-right"></i>
-                    </a>
+                    <img id="image1" src="img/bread-loafs-tp.png" alt="">
+                    <a href="/categories/loaf.html">shop now</a>
                 </div>
-
                 <div class="box">
-                    <a href="categories/loaf.html">
-                        <img src="img/bread-loafs-tp.png" class="box-img">
-                        <h3>Loafs</h3>
-                        <p>text</p>
-                        <i class="bx bx-chevron-right"></i>
-                    </a>
+                    <img id="image1" src="img/modak-tp.png" alt="">
+                    <a href="/categories/modak.html">shop now</a>
                 </div>
             </div>
         </section>
-   </main>
+    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
         integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -256,6 +245,25 @@
                 top: dets.y - 100
             })
         })
+
+        const boxContainer = document.querySelector('.box-container');
+        // Select all the box elements
+        const boxes = document.querySelectorAll('.box');
+
+        // Add event listeners to each box
+        boxes.forEach(box => {
+            box.addEventListener('mouseenter', () => {
+                const image = box.querySelector('#image1'); // Select the image within the specific box
+                image.src = 'img/thumb0.jpg';
+            });
+
+            box.addEventListener('mouseleave', () => {
+                const image = box.querySelector('#image1'); // Select the image within the specific box
+                image.src = 'img/cake-tp.png';
+            });
+        });
+
+
     </script>
 
     <div class="footer-main">

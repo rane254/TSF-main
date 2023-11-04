@@ -20,7 +20,9 @@
     --blueQueen: rgba(69, 105, 144, 1);
     --redFire: rgba(244, 91, 105, 1);
     --green: #B0D09E;
+    /* --green: #ddb892; */
     --light-green: #CFE3BF;
+    /* --light-green: #e6ccb2; */
     --box-shadow: 0 0 10px rgba(0 0 0/15%);
 }
 
@@ -531,28 +533,22 @@ a.button:hover {
     transition: all 800ms ease-in-out;
 }
 
+/* .thumb .box-container .box .box-img.choco {
+    max-width: 60%;
+} */
+
+.thumb .box-container .box:hover img {
+    transform: rotateY(180deg);
+}
+
 .thumb .box-container .box h3 {
+
     color: #000;
 }
 
-.products {
-    /* background: var(--light-green); */
-    padding: 2vh;
-    margin-left: 2vh;
-    margin-right: 2vh;
-    text-align: center;
-    margin-top: 2vh;
-    font-family: "Poppins", Courier;
-}
-
-.products .box-container {
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-}
 
 
-.products .box-container .box {
+.shop .box-container .box {
     text-align: center;
     margin: 1rem;
     line-height: 1.5;
@@ -562,6 +558,14 @@ a.button:hover {
     color: #333;
     font-weight: bold;
     cursor: pointer;
+}
+
+.shop .box-container .box:hover img {
+    transform: scale(1.5);
+}
+
+.shop {
+    background-image: url('img/body-bg2.jpg');
 }
 
 
