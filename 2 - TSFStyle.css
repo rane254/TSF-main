@@ -67,6 +67,7 @@ a {
 }
 
 .title {
+    background: var(--light-green);
     text-align: center;
     text-transform: uppercase;
     font-size: 1rem;
@@ -74,6 +75,9 @@ a {
     line-height: 2;
 }
 
+.title-row {
+    text-align: center;
+}
 .title p {
     text-transform: capitalize;
 }
@@ -546,13 +550,11 @@ a.button:hover {
     color: #000;
 }
 
-
-
 .shop .box-container .box {
     text-align: center;
     margin: 1rem;
     line-height: 1.5;
-    background: var(--light-green);
+    background: whitesmoke;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     padding-bottom: 1rem;
     color: #333;
