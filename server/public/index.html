@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Silver Flour</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <div class="point">TSF</div>
+        <div class="flex">
+            <a href="index.html" class="logo">
+                <!-- <img src="tsf logo main .png" alt="theSilverFlowerLogo"> -->
+                <h1>The Silver Flour</h1>
+            </a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="/public/navigation/custom.html">Custom</a>
+                <a href="/navigation/others.html">Others</a>
+                <a href="/navigation/about.html">About</a>
+            </nav>
+            <div class="icons">
+                <a href="/navigation/cart.html" class="cart-btn"><i class='bx bx-cart-download'></i></a>
+                <i class="bx bxs-user" id="user-btn"></i>
+                <i class="bx bx-menu" id="menu-btn"></i>
+            </div>
+            <div class="user-box">
+                <p>Username<span><input type="text" placeholder="your username" readonly></span></p>
+                <p>Email<span><input type="text" placeholder="your email" readonly></span></p>
+                <a href="/accounts/login.html" class="btn">Login</a>
+                <a href="/accounts/register.html" class="btn">Register</a>
+                <form method="post">
+                    <button type="submit" name="logout" class="logout-btn">Logout</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <script>
+        var headcon = document.querySelector(".header")
+        var pointbtn = document.querySelector(".point")
+
+        headcon.addEventListener("mouseenter", function () {
+            pointbtn.style.opacity = 1
+            pointbtn.style.scale = 1
+        })
+
+        headcon.addEventListener("mouseleave", function () {
+            pointbtn.style.opacity = 0
+            pointbtn.style.scale = 0
+        })
+
+        headcon.addEventListener("mousemove", function (dets) {
+            pointbtn.style.left = dets.x - 70 + "px";
+            pointbtn.style.top = dets.y - 140 + "px";
+        })
+    </script>
+
+    <main>
+        <section class="main swiper mySwiper">
+            <div class="wrapper swiper-wrapper">
+                <div class="slide swiper-slide">
+                    <img src="/img/banner1.png" alt="img" class="image">
+                    <div class="image-data">
+                        <span class="text">Banner 1</span>
+                        <h2>banner 1</h2>
+                        <a href="#" class="button">About Us</a>
+                    </div>
+                </div>
+
+                <div class="slide swiper-slide">
+                    <img src="/img/banner2.jpg" alt="img" class="image">
+                    <div class="image-data">
+                        <span class="text">Banner 2</span>
+                        <h2>banner 2</h2>
+                        <a href="#" class="button">About Us</a>
+                    </div>
+                </div>
+
+                <div class="slide swiper-slide">
+                    <img src="/img/banner3.jpg" alt="img" class="image">
+                    <div class="image-data">
+                        <span class="text">Banner 3</span>
+                        <h2>banner 3</h2>
+                        <a href="#" class="button">About Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </section>
+
+        <!-- Swiper JS -->
+        <script src="/js/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }
+            });
+        </script>
+
+        <section class="thumb">
+            <!-- <h1>This is Main Content Area..</h1> -->
+            <div class="point">TSF</div>
+            <div class="box-container">
+                <div class="box">
+                    <a href="/categories/cake.html">
+                        <img src="/img/cake-tp.png" class="box-img">
+                        <h3>Cakes</h3>
+                        <p>text</p>
+                        <i class="bx bx-chevron-right"></i>
+                    </a>
+                </div>
+
+                <div class="box">
+                    <a href="/categories/cupcake.html">
+                        <img src="/img/cupcake-tp.png" class="box-img choco">
+                        <h3>Cupcakes</h3>
+                        <p>text</p>
+                        <i class="bx bx-chevron-right"></i>
+                    </a>
+                </div>
+
+                <div class="box">
+                    <a href="/categories/chocolate.html">
+                        <img src="/img/candy-tp.png" class="box-img">
+                        <h3>Chocolates</h3>
+                        <p>text</p>
+                        <i class="bx bx-chevron-right"></i>
+                    </a>
+                </div>
+
+                <div class="box">
+                    <a href="/categories/modak.html">
+                        <img src="/img/modak-tp.png" class="box-img">
+                        <h3>Modaks</h3>
+                        <p>text</p>
+                        <i class="bx bx-chevron-right"></i>
+                    </a>
+                </div>
+
+                <div class="box">
+                    <a href="/categories/loaf.html">
+                        <img src="/img/bread-loafs-tp.png" class="box-img">
+                        <h3>Loafs</h3>
+                        <p>text</p>
+                        <i class="bx bx-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="shop">
+            <div class="title">
+                <h1>Trending Products</h1>
+            </div>
+            <div class="row">
+                <div class="row-detail">
+                    <div class="title-row">
+                        <h1>Baked with passion, served with love..</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="box-container">
+                <div class="box">
+                    <img id="image1" src="/img/Cake1.jpeg" alt="">
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img id="image2" src="/img/Cake2.jpeg" alt="">
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img id="image3" src="/img/Cake3.jpeg" alt="">
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img id="image4" src="/img/Cake4.jpeg" alt="">
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img id="image5" src="/img/Cake5.jpeg" alt="">
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img id="image6" src="/img/Cake6.jpeg" alt="">
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img id="image7" src="/img/Cake7.jpeg" alt="">
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img id="image8" src="/img/Cake8.jpeg" alt="">
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img id="image9" src="/img/CupCake1.jpeg" alt="">
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img id="image10" src="/img/Loaf1.jpeg" alt="">
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var headcon = document.querySelector(".thumb")
+        var pointbtn = document.querySelector(".point")
+
+        headcon.addEventListener("mouseenter", function () {
+            gsap.to(pointbtn, {
+                opacity: 1,
+                scale: 1
+            })
+        })
+
+        headcon.addEventListener("mouseleave", function () {
+            gsap.to(pointbtn, {
+                scale: 0,
+                opacity: 0
+            })
+        })
+
+        headcon.addEventListener("mousemove", function (dets) {
+            gsap.to(pointbtn, {
+                left: dets.x - 60,
+                top: dets.y - 100
+            })
+        })
+
+        const boxContainer = document.querySelector('.box-container');
+        // Select all the box elements
+        const boxes = document.querySelectorAll('.box');
+
+        // Add event listeners to each box
+        boxes.forEach(box => {
+            // image 1
+            box.addEventListener('mouseenter', () => {
+                const image = box.querySelector('#image1'); // Select the image within the specific box
+                image.src = '/img/Cake1-1.jpeg';
+            });
+
+            box.addEventListener('mouseleave', () => {
+                const image = box.querySelector('#image1'); // Select the image within the specific box
+                image.src = '/img/Cake1.jpeg';
+            });
+
+            // image 2
+            box.addEventListener('mouseenter', () => {
+                const image = box.querySelector('#image2'); // Select the image within the specific box
+                image.src = '/img/Cake2-2.jpeg';
+            });
+
+            box.addEventListener('mouseleave', () => {
+                const image = box.querySelector('#image2'); // Select the image within the specific box
+                image.src = '/img/Cake2.jpeg';
+            });
+
+            // image 3
+            box.addEventListener('mouseenter', () => {
+                const image = box.querySelector('#image3'); // Select the image within the specific box
+                image.src = '/img/Cake3-3.jpeg';
+            });
+
+            box.addEventListener('mouseleave', () => {
+                const image = box.querySelector('#image3'); // Select the image within the specific box
+                image.src = '/img/Cake3.jpeg';
+            });
+
+            // image 4
+            box.addEventListener('mouseenter', () => {
+                const image = box.querySelector('#image4'); // Select the image within the specific box
+                image.src = '/img/Cake4-4.jpeg';
+            });
+
+            box.addEventListener('mouseleave', () => {
+                const image = box.querySelector('#image4'); // Select the image within the specific box
+                image.src = '/img/Cake4.jpeg';
+            });
+
+            // image 5
+            box.addEventListener('mouseenter', () => {
+                const image = box.querySelector('#image5'); // Select the image within the specific box
+                image.src = '/img/Cake5-5.jpeg';
+            });
+
+            box.addEventListener('mouseleave', () => {
+                const image = box.querySelector('#image5'); // Select the image within the specific box
+                image.src = '/img/Cake5.jpeg';
+            });
+
+            // image 6
+            box.addEventListener('mouseenter', () => {
+                const image = box.querySelector('#image6'); // Select the image within the specific box
+                image.src = '/img/Cake6-6.jpeg';
+            });
+
+            box.addEventListener('mouseleave', () => {
+                const image = box.querySelector('#image6'); // Select the image within the specific box
+                image.src = '/img/Cake6.jpeg';
+            });
+
+            // image 7
+            box.addEventListener('mouseenter', () => {
+                const image = box.querySelector('#image7'); // Select the image within the specific box
+                image.src = '/img/Cake7-7.jpeg';
+            });
+
+            box.addEventListener('mouseleave', () => {
+                const image = box.querySelector('#image7'); // Select the image within the specific box
+                image.src = '/img/Cake7.jpeg';
+            });
+
+            // image 8
+            box.addEventListener('mouseenter', () => {
+                const image = box.querySelector('#image8'); // Select the image within the specific box
+                image.src = '/img/Cake8.jpeg';
+            });
+
+            box.addEventListener('mouseleave', () => {
+                const image = box.querySelector('#image8'); // Select the image within the specific box
+                image.src = '/img/Cake8.jpeg';
+            });
+
+            // image 9
+            box.addEventListener('mouseenter', () => {
+                const image = box.querySelector('#image9'); // Select the image within the specific box
+                image.src = '/img/CupCake1.jpeg';
+            });
+
+            box.addEventListener('mouseleave', () => {
+                const image = box.querySelector('#image9'); // Select the image within the specific box
+                image.src = '/img/CupCake1.jpeg';
+            });
+
+            // image 10
+            box.addEventListener('mouseenter', () => {
+                const image = box.querySelector('#image10'); // Select the image within the specific box
+                image.src = '/img/Loaf1-1.jpeg';
+            });
+
+            box.addEventListener('mouseleave', () => {
+                const image = box.querySelector('#image10'); // Select the image within the specific box
+                image.src = '/img/Loaf1.jpeg';
+            });
+        });
+
+
+    </script>
+
+    <div class="footer-main">
+        <div class="top-footer">
+            <h2><i class="bx bx-envelope"></i>Sign Up For Newsletter</h2>
+            <div class="input-field">
+                <input type="text" name="" placeholder="email address...">
+                <button type="submit" class="btn">subscribe</button>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="overlay"></div>
+        <div class="footer-content">
+            <div class="img-box">
+                <img src="/img/tsf logo main .png" alt="">
+            </div>
+            <div class="inner-footer">
+                <div class="card">
+                    <div class="list-container">
+                        <ul class="product-list">
+                            <h3>other products</h3>
+                            <a href="/categories/cake.html">
+                                <li>cakes</li>
+                            </a>
+                            <a href="/categories/cupcake.html">
+                                <li>cupcakes</li>
+                            </a>
+                            <a href="/categories/chocolate.html">
+                                <li>chocolates</li>
+                            </a>
+                            <a href="/categories/modak.html">
+                                <li>modaks</li>
+                            </a>
+                            <a href="/categories/loaf.html">
+                                <li>loafs</li>
+                            </a>
+                        </ul>
+                        <ul class="local-list">
+                            <h3>locals</h3>
+                            <a href="https://maps.app.goo.gl/hmDA4SHqqJyVS1aa8" target="_blank">
+                                <li>Goa</li>
+                            </a>
+                            <li>n/a</li>
+                            <li>n/a</li>
+                            <li>n/a</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>newslatter</h3>
+                    <p>Sign Up For newslatter</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/tsfcakesgoa/" target="_blank"><i
+                                class="bx bxl-instagram"></i></a>
+                        <i class="bx bxl-twitter"></i>
+                        <a href="https://www.facebook.com/thesilverflour/" target="_blank"><i
+                                class="bx bxl-facebook"></i></a>
+                        <a href="https://www.youtube.com/@tsfcakes/" target="_blank"><i class="bx bxl-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="card">
+                    <button onclick="topFunction()" id="myBtn"><a href="#top"><i class='bx bxs-up-arrow-circle'></i></a></button>
+                </div> -->
+            </div>
+            <div class="bottom-footer">
+                <p>all rights reserved - brijesh rane</p>
+            </div>
+        </div>
+        <!-- <div class="goup"><a href="#top"><i class='bx bxs-up-arrow-circle'></i></a></div> -->
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var tweet = document.querySelector(".bx.bxl-twitter")
+
+        tweet.addEventListener("click", function () {
+            alert('Soon we will be available on Twitter');
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
