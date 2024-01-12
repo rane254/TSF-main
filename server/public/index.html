@@ -21,7 +21,7 @@
             </a>
             <nav class="navbar">
                 <a href="index.html">Home</a>
-                <a href="/public/navigation/custom.html">Custom</a>
+                <a href="/navigation/custom.html">Custom</a>
                 <a href="/navigation/others.html">Others</a>
                 <a href="/navigation/about.html">About</a>
             </nav>
@@ -46,18 +46,24 @@
         var pointbtn = document.querySelector(".point")
 
         headcon.addEventListener("mouseenter", function () {
-            pointbtn.style.opacity = 1
-            pointbtn.style.scale = 1
+            gsap.to(pointbtn, {
+                opacity: 1,
+                scale: 1
+            })
         })
 
         headcon.addEventListener("mouseleave", function () {
-            pointbtn.style.opacity = 0
-            pointbtn.style.scale = 0
+            gsap.to(pointbtn, {
+                scale: 0,
+                opacity: 0
+            })
         })
 
         headcon.addEventListener("mousemove", function (dets) {
-            pointbtn.style.left = dets.x - 70 + "px";
-            pointbtn.style.top = dets.y - 140 + "px";
+            gsap.to(pointbtn, {
+                left: dets.x - 60,
+                top: dets.y - 100
+            })
         })
     </script>
 
